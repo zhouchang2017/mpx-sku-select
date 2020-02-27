@@ -1,0 +1,53 @@
+<template minapp='native' xlang='wxml'>
+  <view bindtap="onClick" data-type="radio" class="radio-button" wx:class="{{ [{ checked : checked },{disabled:disabled}] }}">
+      <slot />
+  </view>
+</template>
+
+<script>
+import { createComponent } from '@mpxjs/core'
+createComponent({
+  properties: {
+    value: {
+      type: Object,
+      optionalTypes: [String, Number, Boolean]
+    },
+    label: {
+      type: Object,
+      optionalTypes: [String, Number, Boolean]
+    },
+    disabled: Boolean,
+    key: {
+      type: String,
+      value: 'id'
+    }
+  },
+  options: {
+    addGlobalClass: true
+  },
+  methods: {
+    onClick (e) {
+      if (!this.disabled) {
+        this.triggerEvent('input', { value: this.checked ? null : this.label })
+      }
+    }
+  },
+  computed: {
+    checked () {
+      if (!this.value) {
+        return false
+      }
+      return this.value[this.key] === this.label[this.key]
+    }
+  }
+})
+</script>
+
+
+<script  type='application/json' lang='json'>
+{ 
+ "component": true,
+ "usingComponents": {}
+}
+</script>
+

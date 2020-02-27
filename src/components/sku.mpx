@@ -1,0 +1,432 @@
+<template minapp='native' xlang='wxml'>
+  <view class='container'>
+    <van-popup
+      position="bottom"
+      round
+      bind:click-overlay="onClickSkuPanelOverlay"
+      show="{{ showPopup }}"
+    >
+      <view class="p-3">
+        <!-- 缩略图，价格，库存 -->
+        <view class="flex">
+          <!-- 左侧，缩略图 -->
+          <view class="flex justify-center">
+            <image
+              mode="aspectFill"
+              lazy-load
+              src="{{avatar}}"
+              class="bg-gray-500 w-24 h-24 rounded overflow-hidden"
+            />
+          </view>
+          <!-- 右侧，价格，库存 -->
+          <view class="flex flex-col ml-3 justify-end">
+            <view class="mb-1">
+              <text class="text-red-500 text-xs">￥</text>
+              <text class="text-red-500 text-lg">{{price}}</text>
+            </view>
+            <text class="text-gray-500 text-xs">库存 {{countQty}}件</text>
+            <text class="text-xs">{{tips}}</text>
+          </view>
+        </view>
+
+        <!-- 选项列表 -->
+        <view class="mt-2 mb-10">
+          <view
+            class="flex mb-3"
+            wx:if="{{initialized}}"
+            wx:for="{{options}}"
+            wx:key="id"
+          >
+            <option-selection-radio-group
+              wx:model="{{checkOptValues[item.id]}}"
+              option="{{item}}"
+              label="{{item.name}}"
+            ></option-selection-radio-group>
+          </view>
+          <!-- 数量选择 -->
+          <view class="flex justify-between items-center mb-2">
+            <text class="block text-xs">购买数量</text>
+            <van-stepper
+              disabled="{{!isAllChecked}}"
+              value="{{ qty }}"
+              async-change
+              bind:change="onQtyChange"
+            />
+          </view>
+        </view>
+      </view>
+    </van-popup>
+  </view>
+</template>
+
+<script>
+import { createComponent } from '@mpxjs/core'
+// sku选择层
+createComponent({
+  properties: {
+    value: Boolean,
+    product: Object
+  },
+  options: {
+    addGlobalClass: true
+  },
+  data: {
+    checkedItemId: null,
+    checked: null,
+    initialized: false,
+    options: [],
+    items: [],
+    sku: {},
+    maxPrice: 0,
+    minPrice: 0,
+    SKUResult: {},
+    checkOptValues: {},
+    valueSortMap: {},
+    // checkedOptValueSlice: [],
+    // isAllChecked: false,
+    qty: 1
+  },
+  ready () {
+    this.$watch(() => {
+      return (this.checkedItemId + this.qty)
+    }, () => {
+      this.triggerEvent('change', {
+        item: this.checked,
+        qty: this.qty
+      })
+    })
+    this.initializeProduct()
+    this.$nextTick(() => {
+      this.initializeSku()
+      this.initializeItemsPrice()
+      this.initializeSKU()
+      this.initializeCheckedOptionValues()
+    })
+  },
+  watch: {
+    checkOptValues: {
+      handler (value) {
+        this.qty = 1
+        // this.isAllChecked = Object.values(value).every(item => !!item)
+        // this.checkedOptValueSlice = Object.values(value).filter(item => item)
+        this.loopSetOptionValueDisabled()
+        this.checked = this.isAllChecked ? this.sku[this.currentKey] : null
+        this.checkedItemId = this.checked ? this.checked.id : null
+      },
+      deep: true
+    }
+
+  },
+  methods: {
+    // 购买数量
+    onQtyChange (event) {
+      if (this.countQty >= event.detail) {
+        this.qty = event.detail
+      } else {
+        wx.showToast({
+          title: '数量超出范围🤣',
+          icon: 'none'
+        })
+      }
+    },
+    // 初始化数据
+    initializeProduct () {
+      let optionsKeyMaps = {}
+      const count = this.options.length
+      this.options = this.product.options.map((option, index) => {
+        let values = option.values.map(value => {
+          optionsKeyMaps[value.id] = option
+          value.option_id = option.id
+          this.$set(this.valueSortMap, value.id, count - index)
+          return value
+        })
+        option.values = values
+        return option
+      })
+
+      this.items = this.product.items.map(item => {
+        let optionValues = item.option_values.map(value => {
+          value.option_id = optionsKeyMaps[value.id].id
+          return value
+        })
+        item.option_values = optionValues
+        return item
+      })
+
+      this.initialized = true
+    },
+    // init check option values
+    initializeCheckedOptionValues () {
+      this.options.forEach(opt => {
+        this.$set(this.checkOptValues, opt.id, null)
+      })
+    },
+    // 初始化sku
+    initializeSku () {
+      this.sku = this.items.reduce((maps, item) => {
+        const key = item.option_values.map(value => value.id).join(';')
+        maps[key] = item
+        return maps
+      }, {})
+    },
+    // 初始化商品价格区间
+    initializeItemsPrice () {
+      const prices = this.items
+        .filter(item => item.qty > 0)
+        .map(item => item.price)
+      this.maxPrice = Math.max.apply(Math, prices)
+      this.minPrice = Math.min.apply(Math, prices)
+    },
+    // 初始化得到结果集
+    initializeSKU () {
+      let skuKeys = Object.keys(this.sku)
+      skuKeys.forEach(key => {
+        let skuKeyAttrs = key.split(';')
+
+        let item = this.sku[key]
+        // 对每个SKU信息key属性值进行拆分组合
+        let combArr = this.arrayCombine(skuKeyAttrs)
+
+        combArr.forEach(comb => this.add2SKUResult(comb, item))
+
+        // 结果集接放入SKUResult
+        this.SKUResult[key] = {
+          qty: item.qty,
+          prices: [item.price],
+          attrs: item.option_values.map(value => value.name).join(' ')
+        }
+      })
+    },
+    // 把组合的key放入结果集SKUResult
+    add2SKUResult (combArrItem, sku) {
+      var key = combArrItem.join(';')
+      if (this.SKUResult[key]) {
+        // SKU信息key属性·
+        this.SKUResult[key].qty += sku.qty
+        this.SKUResult[key].prices.push(sku.price)
+        this.SKUResult[key].attrs +=
+          ',' + sku.option_values.map(value => value.name).join(' ')
+      } else {
+        this.SKUResult[key] = {
+          qty: sku.qty,
+          prices: [sku.price],
+          attrs: sku.option_values.map(value => value.name).join(' ')
+        }
+      }
+    },
+
+    // 从数组中生成指定长度的组合
+    arrayCombine (targetArr) {
+      if (!targetArr || !targetArr.length) {
+        return []
+      }
+
+      var len = targetArr.length
+      var resultArrs = []
+
+      // 所有组合
+      for (let n = 1; n < len; n++) {
+        var flagArrs = this.getFlagArrs(len, n)
+        while (flagArrs.length) {
+          var flagArr = flagArrs.shift()
+          var combArr = []
+          for (var i = 0; i < len; i++) {
+            flagArr[i] && combArr.push(targetArr[i])
+          }
+          resultArrs.push(combArr)
+        }
+      }
+
+      return resultArrs
+    },
+    // 获得从m中取n的所有组合
+    getFlagArrs (m, n) {
+      if (!n || n < 1) {
+        return []
+      }
+
+      var resultArrs = []
+      var flagArr = []
+      var isEnd = false
+      var i
+      var j
+      var leftCnt
+
+      for (i = 0; i < m; i++) {
+        flagArr[i] = i < n ? 1 : 0
+      }
+
+      resultArrs.push(flagArr.concat())
+
+      while (!isEnd) {
+        leftCnt = 0
+        for (i = 0; i < m - 1; i++) {
+          if (flagArr[i] === 1 && flagArr[i + 1] === 0) {
+            for (j = 0; j < i; j++) {
+              flagArr[j] = j < leftCnt ? 1 : 0
+            }
+            flagArr[i] = 0
+            flagArr[i + 1] = 1
+            var aTmp = flagArr.concat()
+            resultArrs.push(aTmp)
+            if (
+              aTmp
+                .slice(-n)
+                .join('')
+                .indexOf('0') === -1
+            ) {
+              isEnd = true
+            }
+            break
+          }
+          flagArr[i] === 1 && leftCnt++
+        }
+      }
+      return resultArrs
+    },
+    // 遍历可选择项
+    loopSetOptionValueDisabled () {
+      // 获取所有未选取节点
+      let unCheckedOptValues = this.getUnCheckedOptValues()
+      // 遍历未选取节点
+      unCheckedOptValues.forEach(value => {
+        // 获取当前option 选定节点
+        let siblingsSelectedValue = this.checkedOptValueSlice.find(
+          v => v.option_id === value.option_id && v.id !== value.id
+        )
+
+        let testAttrIds = [] // 从选中节点中去掉选中的兄弟节点
+        if (siblingsSelectedValue) {
+          this.checkedOptValueIdSlice.forEach(id => {
+            if (id !== siblingsSelectedValue.id) {
+              testAttrIds.push(id)
+            }
+          })
+        } else {
+          testAttrIds = this.checkedOptValueIdSlice.concat()
+        }
+
+        // 推入当前id
+        testAttrIds.push(value.id)
+        testAttrIds.sort(
+          (v1, v2) => this.valueSortMap[v2] - this.valueSortMap[v1]
+        )
+        const key = testAttrIds.join(';')
+        const res = this.SKUResult[key]
+        if (this.SKUResult[key]) {
+          this.$nextTick(() => {
+            this.$set(value, 'disabled', !(res && res.qty > 0))
+          })
+        }
+      })
+    },
+    // 未选中option value
+    getUnCheckedOptValues () {
+      let checkedIds = this.checkedOptValueSlice.map(item => item.id)
+      return this.options.reduce((res, option) => {
+        res.push(
+          ...option.values.filter(value => checkedIds.indexOf(value.id) < 0)
+        )
+        return res
+      }, [])
+    },
+    onClickSkuPanelOverlay (e) {
+      this.triggerEvent('input', { value: false })
+    },
+    onOptionChange ({ detail }) {
+      const { count, price, tips, num } = detail
+      this.count = count
+      if (this.product.qty === 0) {
+        this.price = this.product.price
+      } else {
+        this.price = price.map(item => item / 100).join('-')
+      }
+      this.checkedOptionText = tips
+      this.num = num
+    }
+  },
+  computed: {
+    showPopup: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.triggerEvent('input', { value })
+      }
+    },
+    canBuy () {
+      return this.product && this.product.qty > 0
+    },
+    avatar () {
+      return this.checked
+        ? this.checked.avatar
+        : this.product
+          ? this.product.images[0]
+          : ''
+    },
+    // // 当前已选属性值
+    checkedOptValueSlice () {
+      return Object.values(this.checkOptValues).filter(item => item)
+    },
+    // 当前已选属性值id
+    checkedOptValueIdSlice () {
+      return this.checkedOptValueSlice.map(value => value.id)
+    },
+    // // 是否全部选中
+    isAllChecked () {
+      return Object.values(this.checkOptValues).every(item => !!item)
+    },
+    // 未选中option
+    getUnCheckedOptSlice () {
+      let checkedOptIds = this.checkedOptValueSlice.map(item => item.option_id)
+      return this.options.filter(opt => checkedOptIds.indexOf(opt.id) < 0)
+    },
+    // 提示文字
+    tips () {
+      let slice = this.isAllChecked ? ['已选择', ...this.checkedOptValueSlice.map(item => item.name)]
+        : ['请选择', ...this.getUnCheckedOptSlice.map(opt => opt.name)]
+      return slice.join(' ')
+    },
+    // 当前选定选项id字符串
+    currentKey () {
+      return this.checkedOptValueIdSlice && this.checkedOptValueIdSlice.join(';')
+    },
+    // 当前选定选项库存总数
+    countQty () {
+      if (this.currentKey && this.SKUResult[this.currentKey]) {
+        return this.SKUResult[this.currentKey].qty
+      }
+      return this.items.reduce((sum, item) => {
+        sum += item.qty
+        return sum
+      }, 0)
+    },
+    // 所选商品价格
+    price () {
+      let min = this.minPrice
+      let max = this.maxPrice
+      if (this.currentKey && this.SKUResult[this.currentKey]) {
+        const prices = this.SKUResult[this.currentKey].prices
+        min = Math.min.apply(Math, prices)
+        max = Math.max.apply(Math, prices)
+      }
+      let amount = min === max ? [max] : [min, max]
+      return amount.map(item => item / 100).join('-')
+    }
+  }
+})
+</script>
+
+<script type='application/json' lang='json'>
+    {
+        "component": true,
+        "usingComponents": {
+            "van-popup": "@vant/weapp/dist/popup/index",
+            "option-selection-radio-group": "./option-selection-radio-group",
+            "van-stepper": "@vant/weapp/dist/stepper/index",
+            "van-goods-action": "@vant/weapp/dist/goods-action/index",
+            "van-goods-action-button": "@vant/weapp/dist/goods-action-button/index"
+        }
+    }
+</script>
+

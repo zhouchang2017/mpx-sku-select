@@ -1,0 +1,229 @@
+<template>
+  <view class='min-h-full relative'>
+    <swiper
+      style="height:{{systemInfo.windowWidth}}px;"
+      indicator-dots
+    >
+      <block
+        wx:for="{{product.images}}"
+        wx:key="index"
+      >
+        <swiper-item>
+          <image
+            bind:tap="previewImage(item)"
+            src="{{item}}"
+            lazy-load
+            mode="aspectFit"
+            class="w-full h-full"
+          />
+        </swiper-item>
+      </block>
+
+    </swiper>
+    <!-- 活动价格 -->
+
+    <!-- 默认价格 -->
+    <view class="flex-col bg-white p-3 mb-2">
+      <view class="mb-2">
+        <van-skeleton
+          loading="{{loading}}"
+          title
+        >
+          <text class="text-red-500 text-xl">{{price}}</text>
+        </van-skeleton>
+      </view>
+
+      <van-skeleton
+        row="2"
+        loading="{{loading}}"
+      >
+        <view class="text-gray-700 text-2line">
+          <van-tag
+            round
+            type="danger"
+          >标签</van-tag>
+          {{product.name}}
+        </view>
+      </van-skeleton>
+
+    </view>
+
+    <!-- list -->
+    <van-cell-group
+      border="{{false}}"
+      class="bg-white"
+    >
+      <van-cell
+        title-class="text-gray-600"
+        border="{{false}}"
+        title="选择"
+        value="{{skuCellValue}}"
+        bind:click="onClickShowSku"
+        is-link
+      />
+      <van-cell
+        title-class="text-gray-600"
+        border="{{false}}"
+        title="参数"
+        bind:click="onClickShowProductAttr"
+        is-link
+      />
+    </van-cell-group>
+
+    <van-skeleton
+      row="2"
+      loading="{{loading}}"
+    >
+      <sku
+        wx:if="{{loaded}}"
+        wx:model="{{showSkuPanel}}"
+        product="{{product}}"
+        bind:change="onSkuSelectedChange"
+      ></sku>
+
+      <product-attr
+        wx:if="{{loaded}}"
+        wx:model="{{showProductAttrPanel}}"
+        product="{{product}}"
+      />
+    </van-skeleton>
+  </view>
+</template>
+
+<script>
+import { createPage } from '@mpxjs/core'
+import store from '../store/index'
+import mockFetchItem from '../mock'
+createPage({
+  data: {
+    id: '',
+    product: {
+      images: [],
+      name: 'loading',
+      description: 'loading'
+    },
+    loaded: false,
+    showSkuPanel: false,
+    showProductAttrPanel: false,
+    loading: true,
+    item: null,
+    qty: 1
+  },
+  async onLoad (query) {
+    // this.id = query.id
+    await this.fetchItem()
+  },
+  async fetchItem () {
+    wx.showNavigationBarLoading({
+      success () {
+        wx.setNavigationBarTitle({ title: '加载中' })
+      }
+    })
+    let product = await mockFetchItem()
+    wx.hideNavigationBarLoading({
+      success () {
+        wx.setNavigationBarTitle({ title: product.name })
+      }
+    })
+    this.loaded = true
+    this.product = product
+    this.loading = false
+  },
+  computed: {
+    ...store.mapGetters([
+      'systemInfo'
+    ]),
+    shouldShowImages () {
+      return this.product && this.product.images && this.product.images.length > 0
+    },
+    skuCellValue () {
+      return this.item ? '已选择 ' + this.item.option_values.map(value => value.name).join(' ') : ''
+    },
+    price () {
+      return this.product ? this.product.price / 100 : 0
+    },
+    canBuy () {
+      return this.product && this.product.qty > 0
+    },
+    disabledScroll () {
+      return this.showSkuPanel || this.showProductAttrPanel
+    }
+  },
+  onSkuSelectedChange ({ detail }) {
+    this.item = detail.item
+    this.qty = detail.qty
+  },
+  onClickShowSku () {
+    this.showSkuPanel = true
+  },
+  onClickShowProductAttr () {
+    this.showProductAttrPanel = true
+  },
+
+  onClickToShopCart () {
+    // todo 写入url到vuex
+    let that = this
+    wx.navigateTo({
+      url: 'shopping-cart-inner',
+      success: function (res) {
+        that.$bus.emit('item-to-shopping-cart', { item: that.product })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
+  },
+
+  previewImage (item) {
+    wx.previewImage({
+      current: item, // 当前显示图片的http链接
+      urls: this.product.images // 需要预览的图片http链接列表
+    })
+  },
+
+  onShow () {
+    // 所在页面显示之后就会执行一次
+
+  },
+  onHide () {
+    // 页面切入后台执行
+    console.log('page hide')
+  },
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh () {
+  },
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom () {
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage () {
+  }
+})
+</script>
+
+<script type='application/json' lang='json'>
+  {
+    "navigationBarTitleText": "商品详情",
+    "navigationBarBackgroundColor": "#ff6f00",
+    "backgroundColorBottom": "#f2f2f2",
+    "backgroundColor": "#f2f2f2",
+    "usingComponents": {
+      "van-skeleton": "@vant/weapp/dist/skeleton/index",
+      "van-tag": "@vant/weapp/dist/tag/index",
+      "van-cell": "@vant/weapp/dist/cell/index",
+      "van-cell-group": "@vant/weapp/dist/cell-group/index",
+      "van-icon": "@vant/weapp/dist/icon/index",
+      "van-goods-action": "@vant/weapp/dist/goods-action/index",
+      "van-goods-action-icon": "@vant/weapp/dist/goods-action-icon/index",
+      "van-goods-action-button": "@vant/weapp/dist/goods-action-button/index",
+      "sku": "../components/sku",
+      "product-attr": "../components/product-attr"
+    }
+  }
+</script>

@@ -1,0 +1,55 @@
+<template minapp='native' xlang='wxml'>
+    <view class='container'>
+        <van-popup position="bottom" closeable safe-area-inset-top round bind:close="onClose" bind:click-overlay="onClose" show="{{ showPopup }}">
+            <view class="p-3">
+                <view class="mt-2 mb-2 flex text-gray-700 text-base items-center justify-center">
+                    产品参数
+                </view>
+                <view class="flex py-2 border-b border" wx:for="{{product.attributes}}" wx:key="*this">
+                    <view class="w-1d5 text-gray-500 text-xs">{{item.name}}</view>
+                    <view class="w-1d5"></view>
+                    <view class="w-3d5 text-gray-700 text-xs">{{item.value}}</view>
+                </view>
+
+            </view>
+        </van-popup>
+    </view>
+</template>
+
+<script>
+  import { createComponent } from '@mpxjs/core'
+  createComponent({
+    properties: {
+      value: Boolean,
+      product: Object
+    },
+    options: {
+      addGlobalClass: true
+    },
+    methods: {
+      onClose (e) {
+        this.triggerEvent('input', { value: false })
+      }
+    },
+    computed: {
+      showPopup: {
+        get () {
+          return this.value
+        },
+        set (value) {
+          this.triggerEvent('input', { value })
+        }
+      }
+    }
+  })
+</script>
+
+<script type='application/json' lang='json'>
+    {
+        "component": true,
+        "usingComponents": {
+            "van-popup": "@vant/weapp/dist/popup/index"
+        }
+    }
+</script>
+

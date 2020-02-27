@@ -1,0 +1,21 @@
+<script>
+ import store from './store'
+
+ // app.js
+ App({
+   async onLaunch () {
+     await store.dispatch('loadSystemInfo')
+   }
+ })
+</script>
+
+<style src="./styles/app.css"></style>
+
+
+<script type="application/json">
+  {
+    "pages": [
+      "./pages/index"
+    ]
+  }
+</script>

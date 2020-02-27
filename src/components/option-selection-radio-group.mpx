@@ -1,0 +1,53 @@
+<template minapp='native' xlang='wxml'>
+    <view class="mb-3 radio-button-group">
+        <text class="block text-xs mb-2">{{label}}</text>
+        <view class="flex container">
+            <option-selection-radio
+                wx:model="{{checked}}"
+                class="{{idx+1!==valuesCount ? 'mr-2' : ''}}"
+                wx:for="{{option.values}}"
+                wx:key="id"
+                label="{{item}}"
+                disabled="{{item.disabled}}"
+            >{{item.name}}</option-selection-radio>
+        </view>
+    </view>
+</template>
+
+<script>
+
+import { createComponent } from '@mpxjs/core'
+createComponent({
+  properties: {
+    label: String,
+    option: Object,
+    value: Object
+  },
+  options: {
+    addGlobalClass: true
+  },
+  computed: {
+    checked: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.triggerEvent('input', { value })
+      }
+    },
+    valuesCount () {
+      return this.option.values.length
+    }
+  }
+})
+</script>
+
+<script  type='application/json' lang='json'>
+{
+ "component": true,
+ "usingComponents": {
+     "option-selection-radio":"./option-selection-radio"
+ }
+}
+</script>
+
