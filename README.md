@@ -2,99 +2,36 @@
 
 ### computed bug 复现🌰
 
-components/sku.mpx
-```javascript
-data: {
-    checkedItemId: null,
-    checked: null,
-    initialized: false,
-    options: [],
-    items: [],
-    sku: {},
-    maxPrice: 0,
-    minPrice: 0,
-    SKUResult: {},
-    checkOptValues: {},
-    valueSortMap: {},
-    // checkedOptValueSlice: [], 
-    // isAllChecked: false,
-    qty: 1
-  },
-  ...
+以下代码中 checked计算属性没有生效
+之前版本选择对应选项后，会高亮
 
-watch: {
-    checkOptValues: {
-      handler (value) {
-        this.qty = 1
-        // this.isAllChecked = Object.values(value).every(item => !!item) 
-        // this.checkedOptValueSlice = Object.values(value).filter(item => item)
-        this.loopSetOptionValueDisabled()
-        this.checked = this.isAllChecked ? this.sku[this.currentKey] : null
-        this.checkedItemId = this.checked ? this.checked.id : null
+components/option-selection-radio-group.mpx
+```javascript
+  computed: {
+    checked: {
+      get () {
+        return this.value
       },
-      deep: true
+      set (value) {
+        this.triggerEvent('input', { value })
+      }
+    },
+    valuesCount () {
+      return this.option.values.length
     }
-},
-
-computed: {
-    ...
-    # 以下两个计算属性未响应
-
-    // // 当前已选属性值
-    checkedOptValueSlice () {
-      return Object.values(this.checkOptValues).filter(item => item)
-    },
-    // // 是否全部选中
-    isAllChecked () {
-      return Object.values(this.checkOptValues).every(item => !!item)
-    },
-}
+  }
 ```
 
-> 目前解决办法:
-
-将 data 下的取消注释
+components/option-selection-radio.mpx
 ```javascript
-data(){
-    ...
-    checkedOptValueSlice: [], 
-    isAllChecked: false,
-    ...
-}
-
-```
-
-将 watch 中的注释取消
-```javascript
-watch: {
-    checkOptValues: {
-      handler (value) {
-        this.qty = 1
-        this.isAllChecked = Object.values(value).every(item => !!item) 
-        this.checkedOptValueSlice = Object.values(value).filter(item => item)
-        this.loopSetOptionValueDisabled()
-        this.checked = this.isAllChecked ? this.sku[this.currentKey] : null
-        this.checkedItemId = this.checked ? this.checked.id : null
-      },
-      deep: true
+  computed: {
+    checked () {
+      if (!this.value) {
+        return false
+      }
+      return this.value[this.key] === this.label[this.key]
     }
-},
-```
-
-将 computed 注释
-```javascript
-    // 当前已选属性值
-    // checkedOptValueSlice () {
-    //   return Object.values(this.checkOptValues).filter(item => item)
-    // },
-    // 当前已选属性值id
-    checkedOptValueIdSlice () {
-      return this.checkedOptValueSlice.map(value => value.id)
-    },
-    // // 是否全部选中
-    // isAllChecked () {
-    //   return Object.values(this.checkOptValues).every(item => !!item)
-    // },
+  }
 ```
 
 > A mpx project
