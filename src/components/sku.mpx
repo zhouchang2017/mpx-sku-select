@@ -4,7 +4,7 @@
       position="bottom"
       round
       bind:click-overlay="onClickSkuPanelOverlay"
-      show="{{ showPopup }}"
+      show="{{ value }}"
     >
       <view class="p-3">
         <!-- 缩略图，价格，库存 -->
@@ -346,14 +346,6 @@ createComponent({
     }
   },
   computed: {
-    showPopup: {
-      get () {
-        return this.value
-      },
-      set (value) {
-        this.triggerEvent('input', { value })
-      }
-    },
     canBuy () {
       return this.product && this.product.qty > 0
     },

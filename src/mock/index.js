@@ -1,517 +1,460 @@
 const product = {
-  attributes: [
-    { name: '品牌', value: 'Lacoste/拉科斯特' },
-    { name: '功能', value: '轻质' },
-    { name: '闭合方式', value: '系带' },
-    { name: '尺码', value: '6,6.5,7.5,8,9,9.5' },
-    { name: '图案', value: '拼色' },
-    { name: '风格', value: '运动' },
-    { name: '流行元素', value: '车缝线' },
-    { name: '鞋跟高', value: '平跟(小于等于1cm)' },
-    { name: '颜色分类', value: '白/黑 147,黑/绿 1B4,白/红 286' },
-    { name: '货号', value: 'M0074R M2/M0014P M2' },
-    { name: '季节', value: '春秋' },
-    { name: '鞋头款式', value: '圆头' },
-    { name: '场合', value: '日常' },
-    { name: '跟底款式', value: '平跟' },
-    { name: '鞋面内里材质', value: '混合材质' },
-    { name: '鞋制作工艺', value: '胶粘鞋' },
-    { name: '鞋面材质', value: '头层牛皮（除牛反绒）' },
-    { name: '款式', value: '运动休闲鞋' }
-  ],
-  brand: { id: '5e2681bb001f5053d8b2b1df', name: 'LACOSTE/法国鳄鱼' },
-  category: { id: '5e267fb3001f5053d8b2b1db', name: '男鞋' },
-  code: 'M0074R',
-  description:
-      '<p class="ql-align-center"><img src="http://q5q1efml2.bkt.clouddn.com/CivzGmGF6CPDboeTtY9GGm8LTr7KSSIh"><img src="http://q5q1efml2.bkt.clouddn.com/I3LligxNxkv4qoA6ObzEJBi4YvJPwyEx"><img src="http://q5q1efml2.bkt.clouddn.com/2NPUsz08drQWojSXgVpU2bO4pUS1O2a6"><img src="http://q5q1efml2.bkt.clouddn.com/Gxo8acySUQt01goXnNs7f0jdWR2lrF60"><img src="http://q5q1efml2.bkt.clouddn.com/PlPmPGFma8566H8BD5SmcODg0Yu0sZsy"><img src="http://q5q1efml2.bkt.clouddn.com/wSpbCJ4LeMq3IbnhevXaGlIJOX5zxwRp"><img src="http://q5q1efml2.bkt.clouddn.com/TFKXdIZ4QzcjQOiwvK2jFDlx8xkHSH0h"><img src="http://q5q1efml2.bkt.clouddn.com/P2AnlGDZOxAd95ghPK0dFML4GuFfLEDE"><img src="http://q5q1efml2.bkt.clouddn.com/nKNWmNTLXj4M4fxPqRguonFgZL1rBYp2"><img src="http://q5q1efml2.bkt.clouddn.com/jTb13xEggnFxWEq4TTcWz6ImKYquRPwe"><img src="http://q5q1efml2.bkt.clouddn.com/7XAbvBLLt6cJX4v9SFHKHPuy4BLQBCWw"><img src="http://q5q1efml2.bkt.clouddn.com/GLk65HHS2rbZDZIf5SDTFGG0TAsGHmMD"></p><p class="ql-align-center"><img src="http://q5q1efml2.bkt.clouddn.com/uyHJ6E8NLykVsfqZVePDtP94gbRdJD2I"><img src="http://q5q1efml2.bkt.clouddn.com/otToYyQsnLvboA5O8oqGw3uMR9UHoFuY"></p><p class="ql-align-center">&nbsp;</p><p class="ql-align-center">&nbsp;</p><p class="ql-align-center">&nbsp;</p><p class="ql-align-center">单品推荐</p><p class="ql-align-center">&nbsp;</p><p class="ql-align-center"><a href="//item.taobao.com/item.htm?spm=a1z10.5-c.w4002-3174489855.41.1f6f76c5zcEfwv&amp;id=610687544220" rel="noopener noreferrer" target="_blank">https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-3174489855.41.1f6f76c5zcEfwv&amp;id=610687544220</a></p><p class="ql-align-center">&nbsp;</p><p class="ql-align-center"><img src="http://q5q1efml2.bkt.clouddn.com/31BEOL2t8kdxOW6dUNrRUkjKpYykUqNy"><img src="http://q5q1efml2.bkt.clouddn.com/mAvtCT5aJaASjJfFRXHbjoe3NFZESWcS"><img src="http://q5q1efml2.bkt.clouddn.com/rjnLHE8jYRFAtNtzsBISxZjAIu36h3l4"></p>',
-  id: '5e51e252ecbe820cbd5f6d6e',
-  images: [
-    'http://q5q1efml2.bkt.clouddn.com/4MZkwXgqXc2DVasinWEnXBk3RkNYyip9',
-    'http://q5q1efml2.bkt.clouddn.com/LWUciUxPc6kFAOzvOK8kTuzcIUv4cRnX',
-    'http://q5q1efml2.bkt.clouddn.com/paoHkyECvDFAHYd0njsifuQDtmLspjKJ',
-    'http://q5q1efml2.bkt.clouddn.com/HCajpbV0eK0BoMJf4uUOWYKSHDgr0OIG',
-    'http://q5q1efml2.bkt.clouddn.com/NAojjIdnNcYeRB1Q5uXOvtpZW7sknS1k'
-  ],
-  items: [
+  'attributes': [
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-      code: 'M0074R1B47H',
-      id: '5e51e253ecbe820cbd5f6d77',
-      option_values: [
-        {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '3495981d-3079-4c4c-940c-7aad669e03ac',
-          name: '7.5 41',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '品牌',
+      'value': 'Lacoste/拉科斯特'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-      code: 'M0074R2869H',
-      id: '5e51e253ecbe820cbd5f6d80',
-      option_values: [
-        {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '66654f58-e2ab-4327-8972-dc6687942a58',
-          name: '9.5 44',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '闭合方式',
+      'value': '系带'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-      code: 'M0074R14709',
-      id: '5e51e253ecbe820cbd5f6d73',
-      option_values: [
-        {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: 'f91a549f-9f1a-4d36-9d96-13f618c11ce5',
-          name: '9 43',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '尺码',
+      'value': '39.5 40 40.5 41 42 42.5 43 44'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-      code: 'M0074R1B49H',
-      id: '5e51e253ecbe820cbd5f6d7a',
-      option_values: [
-        {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '66654f58-e2ab-4327-8972-dc6687942a58',
-          name: '9.5 44',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '颜色分类',
+      'value': '394/白色/红色/深蓝 7A2/深蓝/白色/红色'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-      code: 'M0074R1476H',
-      id: '5e51e253ecbe820cbd5f6d70',
-      option_values: [
-        {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '909efca1-2dc8-4920-90e3-dbb396a840f3',
-          name: '6.5 40',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 5
+      'name': '货号',
+      'value': 'M0045RM1'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-      code: 'M0074R1477H',
-      id: '5e51e253ecbe820cbd5f6d71',
-      option_values: [
-        {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '3495981d-3079-4c4c-940c-7aad669e03ac',
-          name: '7.5 41',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '低帮鞋品名',
+      'value': '板鞋'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-      code: 'M0074R14708',
-      id: '5e51e253ecbe820cbd5f6d72',
-      option_values: [
-        {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: 'a6abc80b-524c-4430-8c0c-377987772565',
-          name: '8 42',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '上市年份季节',
+      'value': '2019年春季'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-      code: 'M0074R28606',
-      id: '5e51e253ecbe820cbd5f6d7b',
-      option_values: [
-        {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '188f6005-a882-450f-a726-410ce6007bbd',
-          name: '6 39.5',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 99000,
-      qty: 1
+      'name': '鞋头款式',
+      'value': '圆头'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-      code: 'M0074R2867H',
-      id: '5e51e253ecbe820cbd5f6d7d',
-      option_values: [
-        {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '3495981d-3079-4c4c-940c-7aad669e03ac',
-          name: '7.5 41',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '鞋面内里材质',
+      'value': '布'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-      code: 'M0074R2866H',
-      id: '5e51e253ecbe820cbd5f6d7c',
-      option_values: [
-        {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '909efca1-2dc8-4920-90e3-dbb396a840f3',
-          name: '6.5 40',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '鞋面材质',
+      'value': '多种材质拼接'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-      code: 'M0074R28609',
-      id: '5e51e253ecbe820cbd5f6d7f',
-      option_values: [
-        {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: 'f91a549f-9f1a-4d36-9d96-13f618c11ce5',
-          name: '9 43',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '款式',
+      'value': '板鞋'
     },
     {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-      code: 'M0074R28608',
-      id: '5e51e253ecbe820cbd5f6d7e',
-      option_values: [
-        {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: 'a6abc80b-524c-4430-8c0c-377987772565',
-          name: '8 42',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
-    },
-    {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-      code: 'M0074R1B46H',
-      id: '5e51e253ecbe820cbd5f6d76',
-      option_values: [
-        {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '909efca1-2dc8-4920-90e3-dbb396a840f3',
-          name: '6.5 40',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
-    },
-    {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-      code: 'M0074R1479H',
-      id: '5e51e253ecbe820cbd5f6d74',
-      option_values: [
-        {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '66654f58-e2ab-4327-8972-dc6687942a58',
-          name: '9.5 44',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
-    },
-    {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-      code: 'M0074R1B406',
-      id: '5e51e253ecbe820cbd5f6d75',
-      option_values: [
-        {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '188f6005-a882-450f-a726-410ce6007bbd',
-          name: '6 39.5',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
-    },
-    {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-      code: 'M0074R14706',
-      id: '5e51e253ecbe820cbd5f6d6f',
-      option_values: [
-        {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: '188f6005-a882-450f-a726-410ce6007bbd',
-          name: '6 39.5',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 4
-    },
-    {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-      code: 'M0074R1B408',
-      id: '5e51e253ecbe820cbd5f6d78',
-      option_values: [
-        {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: 'a6abc80b-524c-4430-8c0c-377987772565',
-          name: '8 42',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
-    },
-    {
-      avatar:
-          'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-      code: 'M0074R1B409',
-      id: '5e51e253ecbe820cbd5f6d79',
-      option_values: [
-        {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f'
-        },
-        {
-          id: 'f91a549f-9f1a-4d36-9d96-13f618c11ce5',
-          name: '9 43',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305'
-        }
-      ],
-      price: 109000,
-      qty: 0
+      'name': '销售渠道类型',
+      'value': '商场同款(线上线下都销售)'
     }
   ],
-  name: '19秋冬款LACOSTE/法国鳄鱼 经典款条纹撞色皮面男鞋 情侣款',
-  on_sale: true,
-  options: [
+  'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/WuuAirdJtU1FSTs2Vo7brb5Oc7UFlsjO',
+  'brand': {
+    'id': '5e2681bb001f5053d8b2b1df',
+    'name': 'LACOSTE/法国鳄鱼'
+  },
+  'category': {
+    'id': '5e267fb3001f5053d8b2b1db',
+    'name': '男鞋'
+  },
+  'code': 'M0045RM1',
+  'description': '<p><img src="http://q7bdg3xlj.bkt.clouddn.com/ihcY3UryoYEP03ti3KGf95xTkdnI0Xud"><img src="http://q7bdg3xlj.bkt.clouddn.com/ZWU5B4B6qcagccjFnKDCJdDYwZ9Y1f2X"><img src="http://q7bdg3xlj.bkt.clouddn.com/yYhC9B5MenkQYp6yIB2NjfOQWfOGyf6w"><img src="http://q7bdg3xlj.bkt.clouddn.com/yb7mT4PZnEY23MvJGIRMODDtDxt20NRV"><img src="http://q7bdg3xlj.bkt.clouddn.com/GoKkG7EBMXTM8zaw6KllHD6MhXS3YXhh"><img src="http://q7bdg3xlj.bkt.clouddn.com/2OhzmhU7d7JlinbjwIGqAS4Gi4wueUqt"><img src="http://q7bdg3xlj.bkt.clouddn.com/v0nNWahxVutxq5iz4uvER85OT3olIqEK"><img src="http://q7bdg3xlj.bkt.clouddn.com/tJvQOVxytIjVm3iWzZCCOH7ZXOpuyk2S"><img src="http://q7bdg3xlj.bkt.clouddn.com/SloZEMB4uKVUvhJT9KBklrvqv728EpQa"><img src="http://q7bdg3xlj.bkt.clouddn.com/355USnvBp3CH3ZNpmnrqhJ6bjW4nGP2J"><img src="http://q7bdg3xlj.bkt.clouddn.com/BwJFBMhErhw8E33U6RmwgoFnoflqQwbN"><img src="http://q7bdg3xlj.bkt.clouddn.com/o1IgZKRVd9IyEmWkpMi61LRnqJzSXDTI"><img src="http://q7bdg3xlj.bkt.clouddn.com/v0nNWahxVutxq5iz4uvER85OT3olIqEK"><img src="http://q7bdg3xlj.bkt.clouddn.com/B9iQGdtxZqTPiX99JdbQEFaxla2cZ1fn"></p>',
+  'id': '5e7457a152766369aba6d1c6',
+  'images': [
+    'http://q7bdg3xlj.bkt.clouddn.com/WuuAirdJtU1FSTs2Vo7brb5Oc7UFlsjO',
+    'http://q7bdg3xlj.bkt.clouddn.com/KfgzZ1GOMl13KRpaGK4rkCjW4XscLsVt',
+    'http://q7bdg3xlj.bkt.clouddn.com/seX2SQIRO80aYwd4vmE5rKH5aWR01Gqx',
+    'http://q7bdg3xlj.bkt.clouddn.com/tHpFRAWe1oJokbo4SfhGzqMZGfpIwdf5',
+    'http://q7bdg3xlj.bkt.clouddn.com/2LTfFTfHHNIRXJ9oBEJNw5Y6l6QD4uln'
+  ],
+  'items': [
     {
-      id: '486a065e-b5cf-439e-91ed-574a1b8ac69f',
-      name: '颜色分类',
-      image: true,
-      values: [
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM139406',
+      'id': '5e7457a152766369aba6d1c7',
+      'on_sale': true,
+      'option_values': [
         {
-          id: '56c9aeaf-1cb3-46e0-badd-4bc7105efb39',
-          name: '白/黑 147',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/oLTJwjSzYCYmOduu7WUHsdJqnoSIyub8',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f',
-          disabled: false
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
         },
         {
-          id: 'ff6fbca5-ddef-4097-809d-bc5ce9ca0716',
-          name: '黑/绿 1B4',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/SDbAtLSM7hva40ZvcKRURzcgukAq1sFA',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f',
-          disabled: true
+          'id': 'd22e9903-8da8-4d49-b3da-be01e87f269a',
+          'name': '39.5'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM13946H',
+      'id': '5e7457a152766369aba6d1c8',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
         },
         {
-          id: 'ad43368c-2434-4132-b16a-c360356a51e4',
-          name: '白/红 286',
-          image:
-              'http://q5q1efml2.bkt.clouddn.com/xSyvD3e5coG8ZecVeyaouRHisjoRKE0R',
-          option_id: '486a065e-b5cf-439e-91ed-574a1b8ac69f',
-          disabled: true
+          'id': '351b9bdf-fe53-43e3-9c29-636cfebd29c1',
+          'name': '40'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM139407',
+      'id': '5e7457a152766369aba6d1c9',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': 'd3984389-13b9-4f3d-9ab5-dc023ca72b22',
+          'name': '40.5'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM13947H',
+      'id': '5e7457a152766369aba6d1ca',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': '94fd1d78-1f02-403b-8ad6-21bc0e8187a0',
+          'name': '41'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 7
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM139408',
+      'id': '5e7457a152766369aba6d1cb',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': 'd7452405-adf5-41ab-99cc-081dc70e8ed8',
+          'name': '42'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM13948H',
+      'id': '5e7457a152766369aba6d1cc',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': 'eb89ea41-bba6-4b90-ac37-586a57cbe2a3',
+          'name': '42.5'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM139409',
+      'id': '5e7457a152766369aba6d1cd',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': '080230cd-d199-437b-bd40-a15b82a8a520',
+          'name': '43'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz',
+      'code': 'M0045RM13949H',
+      'id': '5e7457a152766369aba6d1ce',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': 'b27a12e1-84a3-42d9-9a43-fbf7794b13ce',
+          'name': '44'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A206',
+      'id': '5e7457a152766369aba6d1cf',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': 'd22e9903-8da8-4d49-b3da-be01e87f269a',
+          'name': '39.5'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A26H',
+      'id': '5e7457a152766369aba6d1d0',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': '351b9bdf-fe53-43e3-9c29-636cfebd29c1',
+          'name': '40'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A207',
+      'id': '5e7457a152766369aba6d1d1',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': 'd3984389-13b9-4f3d-9ab5-dc023ca72b22',
+          'name': '40.5'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A27H',
+      'id': '5e7457a152766369aba6d1d2',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': '94fd1d78-1f02-403b-8ad6-21bc0e8187a0',
+          'name': '41'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A208',
+      'id': '5e7457a152766369aba6d1d3',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': 'd7452405-adf5-41ab-99cc-081dc70e8ed8',
+          'name': '42'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A28H',
+      'id': '5e7457a152766369aba6d1d4',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': 'eb89ea41-bba6-4b90-ac37-586a57cbe2a3',
+          'name': '42.5'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A209',
+      'id': '5e7457a152766369aba6d1d5',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': '080230cd-d199-437b-bd40-a15b82a8a520',
+          'name': '43'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    },
+    {
+      'avatar': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS',
+      'code': 'M0045RM17A29H',
+      'id': '5e7457a152766369aba6d1d6',
+      'on_sale': true,
+      'option_values': [
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
+        },
+        {
+          'id': 'b27a12e1-84a3-42d9-9a43-fbf7794b13ce',
+          'name': '44'
+        }
+      ],
+      'price': 85000,
+      'promotion_price': 85000,
+      'qty': 10
+    }
+  ],
+  'name': 'LACOSTE法国鳄鱼男鞋春夏潮流拼色经典条纹低帮板鞋男|M0045RM1',
+  'on_sale': true,
+  'options': [
+    {
+      'id': 'fff725f9-11da-4ab7-bba5-07ed1f9b81b0',
+      'name': '颜色分类',
+      'image': true,
+      'values': [
+        {
+          'id': '7128fceb-34fa-4cf8-98c6-82497bacd1a2',
+          'name': '394/白色/红色/深蓝',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/0IYo7NJWmmgxPtVwY54e1n9lKS97bZBz'
+        },
+        {
+          'id': 'de80cc78-beb8-448a-840c-cb43a069ec9d',
+          'name': '7A2/深蓝/白色/红色',
+          'image': 'http://q7bdg3xlj.bkt.clouddn.com/LVFwlRIzWYpdzPKYyQdPH7HsgGHGTLdS'
         }
       ]
     },
     {
-      id: '591d3506-a424-41b2-a29d-819caa340305',
-      name: '尺码',
-      image: false,
-      values: [
+      'id': '7cd811ee-0a97-4366-afba-8baa228611af',
+      'name': '尺码',
+      'image': false,
+      'values': [
         {
-          id: '188f6005-a882-450f-a726-410ce6007bbd',
-          name: '6 39.5',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305',
-          disabled: false
+          'id': 'd22e9903-8da8-4d49-b3da-be01e87f269a',
+          'name': '39.5'
         },
         {
-          id: '909efca1-2dc8-4920-90e3-dbb396a840f3',
-          name: '6.5 40',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305',
-          disabled: false
+          'id': '351b9bdf-fe53-43e3-9c29-636cfebd29c1',
+          'name': '40'
         },
         {
-          id: '3495981d-3079-4c4c-940c-7aad669e03ac',
-          name: '7.5 41',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305',
-          disabled: true
+          'id': 'd3984389-13b9-4f3d-9ab5-dc023ca72b22',
+          'name': '40.5'
         },
         {
-          id: 'a6abc80b-524c-4430-8c0c-377987772565',
-          name: '8 42',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305',
-          disabled: true
+          'id': '94fd1d78-1f02-403b-8ad6-21bc0e8187a0',
+          'name': '41'
         },
         {
-          id: 'f91a549f-9f1a-4d36-9d96-13f618c11ce5',
-          name: '9 43',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305',
-          disabled: true
+          'id': 'd7452405-adf5-41ab-99cc-081dc70e8ed8',
+          'name': '42'
         },
         {
-          id: '66654f58-e2ab-4327-8972-dc6687942a58',
-          name: '9.5 44',
-          option_id: '591d3506-a424-41b2-a29d-819caa340305',
-          disabled: true
+          'id': 'eb89ea41-bba6-4b90-ac37-586a57cbe2a3',
+          'name': '42.5'
+        },
+        {
+          'id': '080230cd-d199-437b-bd40-a15b82a8a520',
+          'name': '43'
+        },
+        {
+          'id': 'b27a12e1-84a3-42d9-9a43-fbf7794b13ce',
+          'name': '44'
         }
       ]
     }
   ],
-  price: 109000,
-  qty: 10,
-  sort: 0,
-  total_sales_qty: 0
+  'price': 85000,
+  'promotion_price': 85000,
+  'qty': 157,
+  'sort': 0,
+  'total_sales_qty': 0
 }
 
 export default () => new Promise((resolve) => {

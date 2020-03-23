@@ -1,6 +1,6 @@
 <template minapp='native' xlang='wxml'>
     <view class='container'>
-        <van-popup position="bottom" closeable safe-area-inset-top round bind:close="onClose" bind:click-overlay="onClose" show="{{ showPopup }}">
+        <van-popup position="bottom" closeable safe-area-inset-top round bind:close="onClose" bind:click-overlay="onClose" show="{{ value }}">
             <view class="p-3">
                 <view class="mt-2 mb-2 flex text-gray-700 text-base items-center justify-center">
                     产品参数
@@ -29,16 +29,6 @@
     methods: {
       onClose (e) {
         this.triggerEvent('input', { value: false })
-      }
-    },
-    computed: {
-      showPopup: {
-        get () {
-          return this.value
-        },
-        set (value) {
-          this.triggerEvent('input', { value })
-        }
       }
     }
   })
