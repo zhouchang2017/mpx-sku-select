@@ -89,38 +89,45 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@better-scroll/core@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/core/-/core-2.0.0-beta.6.tgz#aaa4d0f51e110dafa2f7e1249049d3658d494359"
-  integrity sha512-nZ4kWDAPdrYKGGxKYdKP65hnwXsyWl0bymI9H97t8fRgDj//LS5g8EEhva8JlEIxBz8SjWo7tNgcLXq+9i5Ivg==
+"@better-scroll/core@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@better-scroll/core/-/core-2.0.0-beta.10.tgz#d76eb4b11e599b4c5b91e64d496f630d74f1ad84"
+  integrity sha512-rVnw+VNit+o4rU5tn8NzasMGvuFSQOrZIKttzaCC1KY+RgCYNRw3mcaCWjW06rWRXXaBIcV+AsiviKGRteJF2g==
   dependencies:
-    "@better-scroll/shared-utils" "^2.0.0-beta.6"
+    "@better-scroll/shared-utils" "^2.0.0-beta.10"
 
-"@better-scroll/observe-dom@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/observe-dom/-/observe-dom-2.0.0-beta.6.tgz#5ea4fe47c54b8798a9e733f59addf4b98c27739e"
-  integrity sha512-I2NieH0QlCt94TQ5vfWTp5cd4LfV7qirBdRHSQSxKLGOyanTluSa/lZ90wdgG/SFwuJe4mEe8oUHmmTl4ESfaQ==
+"@better-scroll/observe-dom@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@better-scroll/observe-dom/-/observe-dom-2.0.0-beta.10.tgz#2291b12727dbd5ddabc1d45fa259898e47c00904"
+  integrity sha512-SXEx+n/080lfVzrKdPJ7gHuZNi72Mq1tql/HlSowFZvp50fauSyggZigezkHxUugCDVC/5bqxOJ55aBeJ0UF4A==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.0.0-beta.10"
 
-"@better-scroll/shared-utils@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/shared-utils/-/shared-utils-2.0.0-beta.6.tgz#5534d80bfd230908a1d637ce742f2067545d56cc"
-  integrity sha512-dT6i3TLPJ6xPyjq2QC+XZ5DaXUQUxPTFvywHo8pmDbfwRKP/YXkR4uGuYL4ehVhWuPidgkwGYJG0dpjFyHoVfQ==
-
-"@better-scroll/slide@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/slide/-/slide-2.0.0-beta.6.tgz#13c9935af79bbf0742673828501e67882fef833b"
-  integrity sha512-y/ZuK0+Cx0qBhqblUSIuLh40GyGH7thgnPb8QSmqcf5SQ9G55oKBPpwROB5l1i4MO/+5fH+Tbba6xZF20ewluw==
+"@better-scroll/pull-down@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@better-scroll/pull-down/-/pull-down-2.0.0-beta.10.tgz#57a3b3b3784aa265ad26dfec48dccb658db36941"
+  integrity sha512-8HSqOOFaKf6B2+5c9NeD034ULE2ku4bqqtAFtPz+JgtdtGj8+XPQfJqPGUGxpeF8u/hfEBccJPKnFBymGMufGw==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.0.0-beta.10"
 
-"@better-scroll/wheel@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/wheel/-/wheel-2.0.0-beta.6.tgz#cd66694967e798e6148916a5dbee67faae720ca7"
-  integrity sha512-oxuLxB3U+N77Tu3OVOYblEWMP9y/COahTZLE4DSGsv0a9r3WOVxcl67ulpFGdzY7sBLtll6M9k0EJwMmV5tcwg==
+"@better-scroll/shared-utils@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@better-scroll/shared-utils/-/shared-utils-2.0.0-beta.10.tgz#077a245926ddcdbf5493aeda6724e2bf3bebf42f"
+  integrity sha512-47JP+4Of++oD7V0oGhZ2adFRMydMAfcsz1Xp+gqeGpPwULWVpDUoFj5yZwz58MBoGmawZKw0diPyjPEvAGJ1cg==
+
+"@better-scroll/slide@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@better-scroll/slide/-/slide-2.0.0-beta.10.tgz#171e71c3b78421d58027e1c5b867dcf9e248abe4"
+  integrity sha512-403Dp2q73iEnSNcLJEuXZjSdzzBS50vTsdAW7iLd2v+OmJOXTz0EIJScngkQyTosfPvGUx5cKiWFoYlV5uIIfw==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/wheel@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@better-scroll/wheel/-/wheel-2.0.0-beta.10.tgz#c671b2158ab5af11adda8ad188e5e9fd27096659"
+  integrity sha512-tOCtKTFpMsajqbvcwwcKtjkyrc1rs5h2XviE0NsJDAu/3bDlzW2poNVf09xXxnL84RVMGHZ4EPnMwj55u5xUxA==
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
 
 "@mpxjs/api-proxy@^2.3.0":
   version "2.4.8"
@@ -129,22 +136,23 @@
   dependencies:
     axios "^0.19.0"
 
-"@mpxjs/core@^2.4.0":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@mpxjs/core/-/core-2.5.1.tgz#1fad7a98696445f004c4974ea5cf2bf373353ecc"
-  integrity sha512-vS1Ch+OjH2SpDehN8+f1eMXEeE2lT3TnnnNlISQihb8girA1WfMxu6Rd+55i/BE9FoFACqqC9QkrHqzWgj8xaw==
+"@mpxjs/core@^2.5.1":
+  version "2.5.33"
+  resolved "https://registry.yarnpkg.com/@mpxjs/core/-/core-2.5.33.tgz#91f8ad7f68def1a3502f945d5e75df3944a5f5fa"
+  integrity sha512-Uw96mUsEJeWOgZDjhJGJhMzBAiPwTIOTI8gBD5DI6gwND+VLupP20KVf8tk4+q5XmyH/OtFk8z3mQt4BrIGADg==
   dependencies:
     miniprogram-api-typings "^2.8.3"
 
-"@mpxjs/webpack-plugin@^2.4.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@mpxjs/webpack-plugin/-/webpack-plugin-2.5.1.tgz#1c9c4c2efb85afa280690b3ca3beabb6c1dcd5dc"
-  integrity sha512-fDNrYljeeivMg9dy+qC1WKzae/5il4T8RAvHrES10fxw4kkwkRdqz50uvVQrxcQuzfNTMDqgfSAof85neI3Gig==
+"@mpxjs/webpack-plugin@^2.5.1":
+  version "2.5.33"
+  resolved "https://registry.yarnpkg.com/@mpxjs/webpack-plugin/-/webpack-plugin-2.5.33.tgz#98f43a32bb5d21e377d7d866a0b29b88d6307ed1"
+  integrity sha512-/fo/7fY15gLZBg3ISsQXFLUZKAIi6HbA7eRHe7BXTQxc4UF9Z446TMVQXIB/bp0x/RKDgTApXXIvw8xhKrc8Ow==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
-    "@better-scroll/observe-dom" "^2.0.0-beta.6"
-    "@better-scroll/slide" "^2.0.0-beta.6"
-    "@better-scroll/wheel" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.0.0-beta.10"
+    "@better-scroll/observe-dom" "^2.0.0-beta.10"
+    "@better-scroll/pull-down" "^2.0.0-beta.10"
+    "@better-scroll/slide" "^2.0.0-beta.10"
+    "@better-scroll/wheel" "^2.0.0-beta.10"
     async "^2.6.0"
     babel-code-frame "^6.26.0"
     babel-generator "^6.26.1"
@@ -158,6 +166,7 @@
     de-indent "^1.0.2"
     fastparse "^1.1.1"
     hash-sum "^1.0.2"
+    he "^1.1.1"
     html-minifier "^3.5.8"
     icss-utils "^2.1.0"
     loader-utils "1.1.0"
@@ -1279,9 +1288,9 @@ bluebird@^3.1.1, bluebird@^3.5.5:
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
-  integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.9.tgz#26d556829458f9d1e81fc48952493d0ba3507828"
+  integrity sha512-E6QoYqCKZfgatHTdHzs1RRKP7ip4vvm+EyRUeE2RF0NblwVvb0p6jSVeNTOFxPn26QXN2o6SMfNxKp6kU8zQaw==
 
 body-parser@1.19.0:
   version "1.19.0"
@@ -2229,9 +2238,9 @@ electron-to-chromium@^1.3.47:
   integrity sha512-xdU5VCoZyMPMOWtCaMgbr48OwWZHrMLbGnAOlEqibXiIGsb4kiCGWEHK5NOghcVLdBVIbr/BW+yuKxVuGTtzEg==
 
 elliptic@^6.0.0:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
-  integrity sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.3.tgz#cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6"
+  integrity sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==
   dependencies:
     bn.js "^4.4.0"
     brorand "^1.0.1"
@@ -3141,7 +3150,7 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-he@1.2.x:
+he@1.2.x, he@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
