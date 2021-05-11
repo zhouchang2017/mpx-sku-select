@@ -89,38 +89,59 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@better-scroll/core@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/core/-/core-2.0.0-beta.6.tgz#aaa4d0f51e110dafa2f7e1249049d3658d494359"
-  integrity sha512-nZ4kWDAPdrYKGGxKYdKP65hnwXsyWl0bymI9H97t8fRgDj//LS5g8EEhva8JlEIxBz8SjWo7tNgcLXq+9i5Ivg==
+"@better-scroll/core@^2.2.1", "@better-scroll/core@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/core/-/core-2.3.1.tgz#4c29a3b7ea462c659dba0a288a060ddb1a4dde14"
+  integrity sha512-X/10f+1Rxxpad4h8NmToVToED3+vRJIAhMaoXDIOUJ6Glq+ruImxpKStuZ663Ceu+yk2j3TtBwHeOBHWtx8rxA==
   dependencies:
-    "@better-scroll/shared-utils" "^2.0.0-beta.6"
+    "@better-scroll/shared-utils" "^2.3.1"
 
-"@better-scroll/observe-dom@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/observe-dom/-/observe-dom-2.0.0-beta.6.tgz#5ea4fe47c54b8798a9e733f59addf4b98c27739e"
-  integrity sha512-I2NieH0QlCt94TQ5vfWTp5cd4LfV7qirBdRHSQSxKLGOyanTluSa/lZ90wdgG/SFwuJe4mEe8oUHmmTl4ESfaQ==
+"@better-scroll/movable@^2.2.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/movable/-/movable-2.3.1.tgz#82bfbccf5fad84443b465616b2d14a40b13995a1"
+  integrity sha512-4wDvTbtmNar/0y0WJEY0hAOjFcyqz7qFChP4jeHvufcDHW1lKDzY3MZKs5NXiskdHvz68q1AItKxVLRZNPwjhQ==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.3.1"
 
-"@better-scroll/shared-utils@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/shared-utils/-/shared-utils-2.0.0-beta.6.tgz#5534d80bfd230908a1d637ce742f2067545d56cc"
-  integrity sha512-dT6i3TLPJ6xPyjq2QC+XZ5DaXUQUxPTFvywHo8pmDbfwRKP/YXkR4uGuYL4ehVhWuPidgkwGYJG0dpjFyHoVfQ==
-
-"@better-scroll/slide@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/slide/-/slide-2.0.0-beta.6.tgz#13c9935af79bbf0742673828501e67882fef833b"
-  integrity sha512-y/ZuK0+Cx0qBhqblUSIuLh40GyGH7thgnPb8QSmqcf5SQ9G55oKBPpwROB5l1i4MO/+5fH+Tbba6xZF20ewluw==
+"@better-scroll/observe-dom@^2.2.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/observe-dom/-/observe-dom-2.3.1.tgz#bfb09456305b8a47dae60804d7647f9db36ae104"
+  integrity sha512-d1syBdrRuhdkUcNSwfu/fEIcWKlxeVgfUiMAbVw4iUp7jLQVZe8hKsBXU0zHy+CMW++mqoeuPK6owBjIohH8eQ==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.3.1"
 
-"@better-scroll/wheel@^2.0.0-beta.6":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@better-scroll/wheel/-/wheel-2.0.0-beta.6.tgz#cd66694967e798e6148916a5dbee67faae720ca7"
-  integrity sha512-oxuLxB3U+N77Tu3OVOYblEWMP9y/COahTZLE4DSGsv0a9r3WOVxcl67ulpFGdzY7sBLtll6M9k0EJwMmV5tcwg==
+"@better-scroll/pull-down@^2.2.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/pull-down/-/pull-down-2.3.1.tgz#275ac78f83e9207dbc5a374173375b7df763d09c"
+  integrity sha512-R4Q0Ce1Mv2s3TtPzhAVdMEoDLn7qXmr7qUVZjlr4mlLIGmY1Fmk/PzO65kSiDL4PylFfHusUnguJVRcWxjB3oA==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.3.1"
+
+"@better-scroll/shared-utils@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/shared-utils/-/shared-utils-2.3.1.tgz#e863a6ed32aa79d37870dafe26b052827017a88f"
+  integrity sha512-w0VjSDAYArTnq1PyDoikdHlOTNrNVgWeYZCej3iVC/JQuhHH/wpROPUFjdF9hz8REF4+ACluX9Y+fMYy5do5vA==
+
+"@better-scroll/slide@^2.2.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/slide/-/slide-2.3.1.tgz#9177028ff6dcd866ba4fdd4ca87d5cf54bf57684"
+  integrity sha512-MZACjWABJ/pKdpns42LUXjNbXGAcEaWWQalukZgL870XF6Bd2qNTsXfz1ykNUuoaDcY9Ruh7iCwa7gZ078oKBw==
+  dependencies:
+    "@better-scroll/core" "^2.3.1"
+
+"@better-scroll/wheel@^2.2.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/wheel/-/wheel-2.3.1.tgz#f64776724f3287a7c420d238a175a7b3c8c85685"
+  integrity sha512-ANmKSsY8IKnyPgcCDamMi+MNRvNbtGmu13wcv/GgVhNMGem9fwf/BtWEE2TFxga3xR98cESJAqqrWgdl9oGCvg==
+  dependencies:
+    "@better-scroll/core" "^2.3.1"
+
+"@better-scroll/zoom@^2.2.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@better-scroll/zoom/-/zoom-2.3.1.tgz#0addef4a5dacd3d3b8f23fa6a937bdec05338b0e"
+  integrity sha512-29d8GxVxUo2v3rTwhJBKvI9sUWWQPiRGeKq7Nl3rXwY8iDeRlI4XDpy0vW6zxdgTjskl1P3VvzpnJKXVlZpmaA==
+  dependencies:
+    "@better-scroll/core" "^2.3.1"
 
 "@mpxjs/api-proxy@^2.3.0":
   version "2.4.8"
@@ -129,22 +150,28 @@
   dependencies:
     axios "^0.19.0"
 
-"@mpxjs/core@^2.4.0":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@mpxjs/core/-/core-2.5.1.tgz#1fad7a98696445f004c4974ea5cf2bf373353ecc"
-  integrity sha512-vS1Ch+OjH2SpDehN8+f1eMXEeE2lT3TnnnNlISQihb8girA1WfMxu6Rd+55i/BE9FoFACqqC9QkrHqzWgj8xaw==
+"@mpxjs/core@^2.5.1":
+  version "2.6.61"
+  resolved "https://registry.yarnpkg.com/@mpxjs/core/-/core-2.6.61.tgz#5f9ab560ade139923e071904d907948a12330240"
+  integrity sha512-z10OC74wWmOYM49biKgOBW7yDx7CdGPZ+9y35KLtqZlMnNDNyN9hiTKrZ/ijKYraTOcUKpSDONxKi0ksLiRA0Q==
   dependencies:
-    miniprogram-api-typings "^2.8.3"
+    "@types/node" "^14.14.41"
+    lodash "^4.1.1"
+    miniprogram-api-typings "^3.0.2"
 
-"@mpxjs/webpack-plugin@^2.4.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@mpxjs/webpack-plugin/-/webpack-plugin-2.5.1.tgz#1c9c4c2efb85afa280690b3ca3beabb6c1dcd5dc"
-  integrity sha512-fDNrYljeeivMg9dy+qC1WKzae/5il4T8RAvHrES10fxw4kkwkRdqz50uvVQrxcQuzfNTMDqgfSAof85neI3Gig==
+"@mpxjs/webpack-plugin@^2.5.1":
+  version "2.6.61"
+  resolved "https://registry.yarnpkg.com/@mpxjs/webpack-plugin/-/webpack-plugin-2.6.61.tgz#460a91bad98ddb7f75bc226bc742e5e21d70ce04"
+  integrity sha512-CIVX65ZjJxfrqt3uwDd9+32daVoaJvP7ubUp+4lTgh6VgjDycXQe2NsT6DJOMq30/gpE62EEEDKqTvFtmBDyiw==
   dependencies:
-    "@better-scroll/core" "^2.0.0-beta.6"
-    "@better-scroll/observe-dom" "^2.0.0-beta.6"
-    "@better-scroll/slide" "^2.0.0-beta.6"
-    "@better-scroll/wheel" "^2.0.0-beta.6"
+    "@better-scroll/core" "^2.2.1"
+    "@better-scroll/movable" "^2.2.1"
+    "@better-scroll/observe-dom" "^2.2.1"
+    "@better-scroll/pull-down" "^2.2.1"
+    "@better-scroll/slide" "^2.2.1"
+    "@better-scroll/wheel" "^2.2.1"
+    "@better-scroll/zoom" "^2.2.1"
+    acorn-walk "^7.2.0"
     async "^2.6.0"
     babel-code-frame "^6.26.0"
     babel-generator "^6.26.1"
@@ -158,8 +185,10 @@
     de-indent "^1.0.2"
     fastparse "^1.1.1"
     hash-sum "^1.0.2"
+    he "^1.1.1"
     html-minifier "^3.5.8"
     icss-utils "^2.1.0"
+    json5 "^2.1.3"
     loader-utils "1.1.0"
     lodash "^4.17.15"
     lodash.camelcase "^4.3.0"
@@ -177,6 +206,11 @@
     resolve "^1.5.0"
     source-list-map "^2.0.0"
     webpack-sources "^1.1.0"
+
+"@types/node@^14.14.41":
+  version "14.14.44"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.44.tgz#df7503e6002847b834371c004b372529f3f85215"
+  integrity sha512-+gaugz6Oce6ZInfI/tK4Pq5wIIkJMEJUu92RB3Eu93mtj4wjjjz9EB5mLp5s1pSsLXdC/CPut/xF20ZzAQJbTA==
 
 "@vant/weapp@^1.0.6":
   version "1.0.6"
@@ -356,6 +390,11 @@ acorn-walk@^6.1.1:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-6.2.0.tgz#123cb8f3b84c2171f1f7fb252615b1c78a6b1a8c"
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
+
+acorn-walk@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-7.2.0.tgz#0de889a601203909b0fbe07b8938dc21d2e967bc"
+  integrity sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==
 
 acorn@^6.0.7, acorn@^6.2.1:
   version "6.4.0"
@@ -3141,7 +3180,7 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-he@1.2.x:
+he@1.2.x, he@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
@@ -3176,9 +3215,9 @@ hoopy@^0.1.4:
   integrity sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ==
 
 hosted-git-info@^2.1.4:
-  version "2.8.7"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.7.tgz#4d2e0d5248e1cfabc984b0f6a6d75fe36e679511"
-  integrity sha512-ChkjQtKJ3GI6SsI4O5jwr8q8EPrWCnxuc4Tbx+vRI5x6mDOpjKKltNo1lRlszw3xwgTOSns1ZRBiMmmwpcvLxg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 html-comment-regex@^1.1.0:
   version "1.1.2"
@@ -3681,6 +3720,13 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
+json5@^2.1.3:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
+  integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
+  dependencies:
+    minimist "^1.2.5"
+
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -3805,6 +3851,11 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
+
+lodash@^4.1.1:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
@@ -4024,10 +4075,10 @@ minimist@^1.2.0, minimist@^1.2.5:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
-miniprogram-api-typings@^2.8.3:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/miniprogram-api-typings/-/miniprogram-api-typings-2.10.2.tgz#a94995fd8c167b58dcc45bee46e600f543563ec2"
-  integrity sha512-nb2vtGCVyNRJqR8C01RVg9H4qCuq5u2eCdEVjrSO1E9ZDonUApCePs3ZEtd0C8CbTuBmp5ZlGhX1Npnu5dxEfg==
+miniprogram-api-typings@^3.0.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/miniprogram-api-typings/-/miniprogram-api-typings-3.3.2.tgz#1e6aa65817e6534850141cd2af23eeff6ba61b4e"
+  integrity sha512-i8yxwPOGYZ33J/VoJR/mA0Ps2JKuUE6wsn8pdHqKpUrskZuxNsjVf8Z5TPLBisYis3drLdJQ5Gjon8WIwXswYg==
 
 mississippi@^3.0.0:
   version "3.0.0"
